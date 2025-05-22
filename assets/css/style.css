@@ -1,0 +1,143 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background: var(--bg-gradient);
+  color: var(--clr-text);
+  transition: background 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+}
+
+/* ===== THEME ===== */
+:root {
+  --clr-text: #111;
+  --clr-bg: #ffffff;
+  --clr-primary: #007acc;
+  --clr-header-bg: #ffffff;
+  --clr-footer-bg: #ffffff;
+  --btn-bg: var(--clr-primary);
+  --btn-text: #ffffff;
+  --bg-gradient: linear-gradient(135deg, #f0f8ff, #ffffff);
+}
+
+[data-theme="dark"] {
+  --clr-text: #f1f1f1;
+  --clr-bg: #121212;
+  --clr-primary: #00b7ff;
+  --clr-header-bg: #1e1e1e;
+  --clr-footer-bg: #1a1a1a;
+  --btn-bg: var(--clr-primary);
+  --btn-text: #121212;
+  --bg-gradient: linear-gradient(135deg, #0a0a0a, #1e1e1e);
+}
+
+/* ===== Header & Footer ===== */
+.site-header, .site-footer {
+  background: var(--clr-header-bg);
+  color: var(--clr-text);
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.nav {
+  align-items: center;
+}
+
+
+/* ===== Nav ===== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: auto;
+}
+.logo {
+  font-weight: bold;
+}
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav__list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 2rem;
+  text-align: center;
+}
+.hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero__subtitle {
+  font-size: 1.2rem;
+  color: var(--clr-text);
+  margin-bottom: 2rem;
+}
+.btn {
+  padding: 0.75em 1.5em;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #005a99;
+}
+
+/* ===== Content Section ===== */
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+.about h1, .about h2 {
+  margin-bottom: 0.5rem;
+}
+.about ul {
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+/* ===== Toggle Button ===== */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s ease, color 0.3s ease;
+}
